@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import NormalizeStyle from './Styles/GlobalStyles/normalizeStyle';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      test
-    </div>
+    <Fragment>
+      <NormalizeStyle />
+      <div className="App">
+        test
+      </div>
+    </Fragment>
   );
 }
 
