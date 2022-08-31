@@ -1,17 +1,27 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import styled from "styled-components";
+import { motion } from "framer-motion";
+import Navbar from "../Navbar/Navbar";
+import OutletSectionContainer from "../OutletSectionContainer/OutletSectionContainer";
 
-const Layout = () => {
+const LayoutDiv = styled(motion.div)`
+	background-color: #145894; //for development
+	//STATIC
+	height: inherit;
+	width: inherit;
+`;
+
+interface Props {
+	children?: JSX.Element;
+}
+
+export default function Layout(props: Props) {
 	return (
-		<>
-			<nav>
-				<Link to="/">About</Link>
-				<Link to="/projects">Projects</Link>
-				<Link to="/contact">Contact</Link>
-			</nav>
-
-			<Outlet />
-		</>
+		<LayoutDiv>
+			<Navbar />
+			<OutletSectionContainer>
+				<Outlet />
+			</OutletSectionContainer>
+		</LayoutDiv>
 	);
-};
-
-export default Layout;
+}
