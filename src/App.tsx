@@ -1,14 +1,35 @@
-import React, { Fragment } from 'react';
-import NormalizeStyle from './Styles/GlobalStyles/normalizeStyle';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import routesPageData from "./Api/RoutesPageData";
+import Layout from "./Components/Layout/Layout";
+import About from "./Routes/About/About";
+import Contact from "./Routes/Contact/Contact";
+import NotFoundPage from "./Routes/NotFoundPage/NotFoundPage";
+import Projects from "./Routes/Projects/Projects";
+import NormalizeStyle from "./Styles/GlobalStyles/normalizeStyle";
 
-const App = () => {
+function App() {
   return (
-    <Fragment>
+    <BrowserRouter>
       <NormalizeStyle />
-      <div className="App">
-        test
-      </div>
-    </Fragment>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<About title={routesPageData.about.title} />} />
+          <Route
+            path="projects"
+            element={<Projects title={routesPageData.projects.title} />}
+          />
+          <Route
+            path="contact"
+            element={<Contact title={routesPageData.contact.title} />}
+          />
+          <Route
+            path="*"
+            element={<NotFoundPage title={routesPageData.notFoundPage.title} />}
+          />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
