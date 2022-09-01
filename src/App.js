@@ -1,14 +1,23 @@
+/* FUNCTIONAL IMPORTS */
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, createContext } from "react";
+
+/* DATA IMPORTS */
 import routesPageData from "./Api/RoutesPageData";
+import LogoData from "./Api/LogoData";
+
+/* COMPONENT IMPORTS */
 import Layout from "./Components/Layout/Layout";
 import About from "./Routes/About/About";
 import Contact from "./Routes/Contact/Contact";
 import NotFoundPage from "./Routes/NotFoundPage/NotFoundPage";
 import Projects from "./Routes/Projects/Projects";
+
+/* STYLE IMPORTS */
 import NormalizeStyle from "./Styles/GlobalStyles/normalizeStyle";
 
 export const NavbarContext = createContext(routesPageData);
+export const LogoContext = createContext(LogoData);
 
 export default function App() {
 	const [routePageData, setRoutePageData] = useState(routesPageData);

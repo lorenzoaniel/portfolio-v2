@@ -11,11 +11,7 @@ const LayoutDiv = styled(motion.div)`
 	width: inherit;
 `;
 
-interface Props {
-	children?: JSX.Element;
-}
-
-export default function Layout(props: Props) {
+export default function Layout(props) {
 	return (
 		<LayoutDiv>
 			<Navbar />

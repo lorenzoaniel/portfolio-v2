@@ -5,11 +5,7 @@ const OutletSectionContainerDiv = styled(motion.div)`
 	background-color: peachpuff; //for development
 `;
 
-interface Props {
-	children?: JSX.Element;
-}
-
-export default function OutletSectionContainer(props: Props) {
+export default function OutletSectionContainer(props) {
 	const { children } = props;
 
 	return <OutletSectionContainerDiv>{children}</OutletSectionContainerDiv>;
