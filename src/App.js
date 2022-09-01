@@ -20,7 +20,7 @@ export const NavbarContext = createContext(routesPageData);
 export const LogoContext = createContext(LogoData);
 
 export default function App() {
-	const [routePageData, setRoutePageData] = useState(routesPageData);
+	const [routePageData] = useState(routesPageData);
 
 	return (
 		<BrowserRouter>

@@ -7,13 +7,12 @@ import NavbarMenuContainer from "../NavbarMenuContainer/NavbarMenuContainer";
 import Logo from "../Logo/Logo";
 import LogoInitialLetter from "../LogoInitialLetter/LogoInitialLetter";
 
-const logoData = useContext(LogoContext);
-
 const NavbarDiv = styled(motion.div)`
 	background-color: green; //for development
 `;
 
 export default function Navbar() {
+	const logoData = useContext(LogoContext);
 	const apiData = useContext(NavbarContext);
 
 	return (
