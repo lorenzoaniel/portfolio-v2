@@ -1,15 +1,18 @@
 const routesPageData = {
 	about: {
-		title: "About",
+		title: '"Homebase"',
 		path: "/",
+		gridArea: "about",
 	},
 	projects: {
-		title: "Projects",
+		title: '"Projects"',
 		path: "projects",
+		gridArea: "projects",
 	},
 	contact: {
-		title: "Contact",
+		title: '"Contacts"',
 		path: "contact",
+		gridArea: "contact",
 	},
 	notFoundPage: {
 		title: "Not Found Page",
