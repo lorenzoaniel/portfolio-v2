@@ -5,10 +5,12 @@ import Navbar from "../Navbar/Navbar";
 import OutletSectionContainer from "../OutletSectionContainer/OutletSectionContainer";
 
 const LayoutDiv = styled(motion.div)`
-	background-color: #145894; //for development
 	//STATIC
 	height: inherit;
 	width: inherit;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: 10vh 90vh;
 `;
 
 export default function Layout(props) {
