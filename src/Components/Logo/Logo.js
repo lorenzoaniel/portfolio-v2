@@ -2,7 +2,11 @@ import styled from "styled-components";
 import { motion } from "framer-motion";
 
 const LogoDiv = styled(motion.div)`
-	/* background-color: green; //for development */
+	background-color: darkgray;
+	width: 100%;
+	grid-area: logo;
+	display: flex;
+	place-content: space-around space-around;
 `;
 
 export default function Logo(props) {
