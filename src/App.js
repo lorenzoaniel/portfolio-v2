@@ -22,6 +22,10 @@ export const LogoContext = createContext(LogoData);
 export default function App() {
 	const [routePageData] = useState(routesPageData);
 
+	// useEffect(() => {
+	// 	setRoutePageData(routesPageData);
+	// }, [routesPageData]);
+
 	return (
 		<BrowserRouter>
 			<NormalizeStyle />
