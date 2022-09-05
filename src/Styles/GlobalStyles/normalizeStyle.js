@@ -5,6 +5,7 @@ const NormalizeStyle = createGlobalStyle`
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    color: black;
   }
 
   html {
