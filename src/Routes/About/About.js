@@ -1,12 +1,13 @@
-import RoutePageBase from "../../Components/RouteBasePage/RoutePageBase";
-import React from "react";
+import styled from "styled-components";
+import { motion } from "framer-motion";
+import RoutePageBaseStyle from "../../Styles/RoutePageBaseStyle/RoutePageBaseStyle";
 
-interface Props {
-	title: string;
-}
+const AboutContainer = styled(motion.div)`
+	${RoutePageBaseStyle}
+`;
 
-export default function About(props: Props) {
+export default function About(props) {
 	let { title } = props;
 
-	return <RoutePageBase title={title} />;
+	return <AboutContainer> {title} </AboutContainer>;
 }
