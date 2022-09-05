@@ -10,7 +10,8 @@ const LayoutDiv = styled(motion.div)`
 	width: inherit;
 	display: grid;
 	grid-template-columns: 100%;
-	grid-template-rows: 10vh 90vh;
+	grid-template-rows: min-content minmax(min-content, 1fr);
+	grid-template-areas: "navbar" "outlet";
 `;
 
 export default function Layout(props) {
