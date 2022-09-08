@@ -10,13 +10,17 @@ import LogoOtherLetters from "../Logo/LogoOtherLetters/LogoOtherLetters";
 import folderImg from "../../Api/Assets/Imgs/pexels-sasha-martynov-1260727.jpg";
 
 const NavbarDiv = styled(motion.div)`
-	background-color: purple;
 	display: grid;
 	height: 6vw;
 	grid-area: navbar;
 	grid-template-columns: repeat(10, 10%);
 	grid-template-rows: 100%;
 	grid-template-areas: " logo logo logo logo about about projects projects contact contact ";
+
+	box-shadow: 0 0 0.5rem 0.1rem rgba(0, 0, 0, 1) inset;
+	filter: drop-shadow(0rem 0.1rem 0.1rem rgba(0, 0, 0, 1));
+
+	background-color: linear-gradient();
 `;
 
 export default function Navbar() {

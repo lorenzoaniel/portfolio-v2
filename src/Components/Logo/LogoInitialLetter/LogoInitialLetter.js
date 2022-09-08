@@ -10,6 +10,7 @@ const LogoInitialLetterDiv = styled(motion.div)`
 const LogoInitialLetterSpan = styled(motion.span)`
 	font-family: "Special Elite", cursive;
 	font-size: 5vw;
+	padding-top: 1vw;
 `;
 
 export default function LogoInitialLetter(props) {
