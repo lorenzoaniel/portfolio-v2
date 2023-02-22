@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 const LogoDiv = styled(motion.div)`
 	width: 100%;
@@ -12,15 +11,6 @@ const LogoDiv = styled(motion.div)`
 
 export default function Logo(props) {
 	const { children } = props;
-	const [showLetters, setShowLetters] = useState(false);
 
-	const toggleShowLetters = () => {
-		setShowLetters((curr) => !curr);
-	};
-
-	return (
-		<LogoDiv onMouseEnter={toggleShowLetters} onMouseLeave={toggleShowLetters}>
-			{children}
-		</LogoDiv>
-	);
+	return <LogoDiv>{children}</LogoDiv>;
 }
